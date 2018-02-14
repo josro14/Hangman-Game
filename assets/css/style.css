@@ -1,0 +1,128 @@
+body {
+    background: url("../images/vintage-concrete.png")
+}
+
+.titulo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 655px;
+}
+
+.lotr_title {
+    margin-left: 40px;
+}
+
+.game-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+  }
+
+.box-1 {
+    height: 600px;
+    width: 350px;
+    border: dotted 6px darkgoldenrod;
+    float: left;
+    border-right: none;
+}
+
+.box-2 {
+    height: 600px;
+    width: 350px;
+    border: dotted 6px darkgoldenrod;
+    float: left;
+    align-content: center;
+}
+
+h3 {
+    font-family: 'Eagle Lake', cursive;
+    line-height: 40px;
+    font-weight:800;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(85, 63, 9)
+}
+
+footer {
+    clear:both;
+    text-align: center;
+    padding: 30px 0px;
+    color: rgb(85, 63, 9)
+}
+
+#Aragorn {
+    display: show;
+    padding: 20px 25px;
+    border-radius: 40px;
+}
+
+#Arwen {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Boromir {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Elrond {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Frodo {
+    display: none;
+    padding: 20px 25px;
+}
+
+ #Gandalf {
+     display: none;
+     padding: 20px 25px;
+ }
+
+ #Gimli {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Gollum {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Legolas {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Mordor {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Rivendell {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Samwise {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Saruman {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Shire {
+    display: none;
+    padding: 20px 25px;
+}
+
+#Bombadil {
+    display: none;
+    padding: 20px 25px;
+}
