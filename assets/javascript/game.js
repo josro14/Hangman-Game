@@ -6,31 +6,54 @@ function gameStart() {
     var words = ["aragorn", "arwen", "boromir", "elrond", "frodo", "gandalf", "gimli", "gollum", "legolas", "mordor", "rivendell", "samwise", "saruman", "shire", "bombadill"];
 
     // Random word generator
-    var rand = words[Math.floor(Math.random() * words.length)];
+    var randWord = words[Math.floor(Math.random() * words.length)];
+    console.log(randWord);
 
-    console.log(rand);
+    // Create the underscore for each letter of the random word
+    var answerArray = [];
+    for (var i = 0; i < randWord.length; i++) {
+        answerArray[i] = "_";
+    }
+
+    // Make variable to track letters to be guessed
+    var lettersLeft = randWord.length;
+    
+    //actual game
+    while (lettersLeft > 0) {
+        var emptyLetter = document.getElementById("letterspot");
+        emptyLetter.innerHTML = answerArray.join (" "); 
+        var guess = prompt("Guess a letter, or click cancel to stop playing");
+        if (guess === null) {
+            break;
+        } else if (guess.length !== 1) {
+            alert ("Please enter a single letter!");
+        } else {
+            for (var j = 0; j < randWord.length; j++) {
+                if (randWord[j] === guess) {
+                    answerArray[j] = guess;
+                    lettersLeft--;
+                }
+            }
+        }
+    }
+
+    emptyLetter.innerHTML = answerArray.join(" ");
+    alert("good job, the answer was " + randWord + ".");
+
     var wins = 0;
+    
+    document.getElementById("wins").innerHTML = wins;
+    
     var guessesLeft = 10;
 
+    document.getElementById("guesses").innerHTML = guessesLeft;
 
+    var emptyLetter = document.getElementById("letterspot");
+    emptyLetter.innerHTML = answerArray;
+    emptyLetter.innerHTML = answerArray.join (" "); 
+    
 
-
-    function addLetter(event) {
-
-    }
-
-    usedLetter.addEventListener("keypress", addLetter);
-
-    function updateGuesses() {
-        document.getElementById("#guesses").innerHTML = guessesLeft;
-    }
-    updateGuesses();
-
-    document.getElementById("wins").innerHTML = wins;
-
-    document.getElementById("used-letter").innerHTML =
-        document.getElementById("letterspot").innerHTML =
-        removeHandler();
+        removeHandler(); 
 }
 
 function removeHandler() {
